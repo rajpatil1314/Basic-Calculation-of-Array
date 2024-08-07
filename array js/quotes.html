@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: wheat;
+            font-size: 70px;
+        }
+        #display
+        {
+            position: absolute;
+            top: 50%;
+
+        }
+    </style>
+</head>
+<body style="background-color: chocolate;">
+    <div id="display"></div>
+    <!-- <button onclick="repeat()">Click Now</button> -->
+    <script>
+        let quotes = [
+            "નમસ્કાર મિત્રો, કેમ છો? ",
+            "आप कैसे हैं ? / क्या हाल है.....!",
+            "I'm not bad. I'm just drawn that way.",
+            "I am serious... and don't call me Shirley.",   
+        ]
+
+        function repeat()
+        {
+            let store = document.getElementById('display');
+
+            let newQuotes = Math.floor(Math.random()*quotes.length)
+            store.innerHTML =quotes[newQuotes];
+        }
+
+        setInterval(repeat,1000)
+    </script>
+</body>
+</html>
